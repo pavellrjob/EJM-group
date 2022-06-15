@@ -1,0 +1,209 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'PT Serif', serif;
+}
+
+.body {
+    max-width: 1920px;
+}
+
+/* Общий контент первого экрана */ 
+
+
+.main-screen {
+    display: grid;
+    grid-template-columns: 1fr 1390px 1fr;
+    grid-template-rows: 100px 1fr;
+    background-image: url(../img/NewsBackground.png);
+    background-color:rgba(231, 242, 255, 0.9);
+    width: 100%;
+    min-height: 1500px;
+    padding-bottom: 1px;
+}
+
+/* Шапка + лого + смена языка */
+
+.header-logo {
+    margin-top: 10px;
+    background-color: transparent;
+    
+}
+
+.header {
+    border-bottom: 2px solid #bcc4d0;
+    display: flex;
+    width: 100%;
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+.header-nav {
+    display: flex;
+    width: 100%;
+
+}
+
+.header-center {
+    padding: 0%;
+    margin-left: 100px;
+    display: flex;
+    margin-top: 30px;
+}
+
+.header-center li {
+    margin-right: 60px;
+    list-style-type: none;
+}
+
+.header-right {
+    margin-top: 30px;
+}
+
+.header-right a {
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #778899;
+}
+
+.header-center a {
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #778899;
+    transition: color .5s ease;
+}
+
+.header-center a:hover {
+    color: #304257;
+}
+
+.header-center a::before {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: orange;
+    position: absolute;
+    top: 10px;
+    opacity: 0;
+    transition: opacity .8s ease;
+}
+
+.header-center a:hover::before {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: orange;
+    position: absolute;
+    top: 10px;
+    opacity: 1;
+}
+
+/* Смена языка */
+
+.header-right {
+    display: inline-block;
+    width: 100px;
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+.header-language {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: height .3s;
+}
+
+.language-choice {
+    display: block;
+    margin-left: 15px;
+}
+
+.triangle-language {
+    margin-right: 5px;
+    padding: 2px;
+}
+
+.header-right:hover .header-language {
+    width: 100px;
+    height: 100px;
+}
+
+/* ссылка на возврат к главной странице */
+.link {
+    max-height: 40px;
+    padding-top: 5px;
+    position: relative;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    max-width: 1390px;
+}
+
+.link a {
+    text-decoration: none;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #82badf;
+}
+
+.back-main {
+    margin-left: 5px;
+    position: relative;
+    text-align: left;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #366a8d;
+}
+
+.link img {
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.header-link {
+    display: flex;
+}
+
+.header-link img {
+    margin-top: 45px;
+    margin-left: 100px;
+}
+
+.news-title {
+    margin-top: 45px;
+    margin-left: 117px;
+    max-width: 400px;
+}
+
+.news-text {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 35px;
+    width: 100%;;
+}
+
+.strong, .third-r, .seсond-r, .forth-r {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.strong-text, .durability-text, .second-r_left, .second-r_right, .third-r_right, .third-r_left, .forth-r_left, .forth-r_right {
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 20px;
+}

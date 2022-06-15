@@ -1,0 +1,704 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'PT Serif', serif;
+}
+
+.body {
+    max-width: 1920px;
+}
+/* Общий контент первого экрана */ 
+
+.main-screen {
+    display: grid;
+    grid-template-columns: 1fr 1390px 1fr;
+    grid-template-rows: 120px 1fr;
+    background-color:rgba(188, 210, 238, .1);
+    width: 100%;
+    height: 100vh;
+}
+
+/* Шапка + лого + смена языка */
+
+.header-logo {
+    margin-top: 10px;
+    background-color: transparent;
+    
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+.header-nav {
+    display: flex;
+    width: 100%;
+
+}
+
+.header-center {
+    padding: 0%;
+    margin-left: 100px;
+    display: flex;
+    margin-top: 30px;
+}
+
+.header-center li {
+    margin-right: 60px;
+    list-style-type: none;
+}
+
+.header-right {
+    margin-top: 30px;
+}
+
+.header-right a {
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #778899;
+}
+
+.header-center a {
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #778899;
+    transition: color .5s ease;
+}
+
+.header-center a:hover {
+    color: #304257;
+}
+
+.header-center a::before {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: orange;
+    position: absolute;
+    top: 10px;
+    opacity: 0;
+    transition: opacity .8s ease;
+}
+
+.header-center a:hover::before {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: orange;
+    position: absolute;
+    top: 10px;
+    opacity: 1;
+}
+
+/* Смена языка */
+
+.header-right {
+    display: inline-block;
+    width: 100px;
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+.header-language {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: height .3s;
+}
+
+.language-choice {
+    display: block;
+    margin-left: 15px;
+}
+
+.triangle-language {
+    margin-right: 5px;
+    padding: 2px;
+}
+
+.header-right:hover .header-language {
+    width: 100px;
+    height: 100px;
+}
+
+
+
+/* Кнопка боковая */
+
+.content-button {
+    cursor: pointer;
+    background-color: transparent;
+    margin: 0 auto;
+    display: block;
+    background-image: url(../img/menu.svg);
+    background-size: 35px 20px;
+    width: 35px;
+    height: 20px;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+
+/* боковая панель */
+
+.side-bar {
+    display: flex;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+.side-bar_link {
+    opacity: 0;
+    left: -400px;
+    position: absolute;
+    top: 90px;
+    transition: background-color .7s ease;
+    transition: opacity .7s ease-in-out;
+
+}
+
+.side-bar_nav {
+    min-width: 250px;
+    background-color: none;
+    text-align: left;
+    padding: 15px;
+    padding-left: 50px;
+    cursor: pointer;
+    list-style: none;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000000;
+    transition: background-color .4s ease;
+}
+
+.content-button:hover .side-bar_link {
+    opacity: 1;
+    left: 50px;
+}
+
+.side-bar_nav:hover {
+    background-color: rgba(0, 0, 0, .5) ;
+    color: white;
+    min-width: 250px;
+    opacity: 1;
+}
+
+/* Социальные сети */
+
+.social {
+    margin-top: auto;
+    margin-bottom: 0;
+    list-style: none;
+    padding: 0%;
+}
+
+/* иконки */
+
+.social-image {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    padding: 0%;
+    transition: height .5s ease;
+}
+
+.social-in, .social-insta, .social-fb {
+    height: 33px;
+}
+
+.link-id:hover .social-in {
+    height: 38px;
+}
+
+.link-fb:hover .social-fb {
+    height: 38px;
+}
+
+.link-insta:hover .social-insta {
+    height: 38px;
+}
+
+/* Главный контент первой страници */
+.main {
+    background-image: url(../img/background_image.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+    width: 100%;
+    margin-top: 0;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+
+
+
+
+
+/* 2 ЭКРАН НАШИ КОМПАНИИ */
+/* Разметка экрана */
+
+.our-company {
+    display: flex;
+    flex-wrap: nowrap;
+    background-image: url(../img/background\ 2\ screen.png);
+    max-width: 1390px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.our-company_img {
+    padding-top: 20px;
+}
+
+/* Кнопки */
+
+.button-all {
+    cursor: pointer;
+    margin-top: 40px;
+    width: 200px;
+    height: 40px;
+    background-color: rgba(255, 161, 50, 1);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 60px;
+    transition: background-color .5s ease;
+}
+
+.button-all:hover {
+    background-color: rgb(202, 115, 15);
+}
+
+/* разделы EJM */
+
+/* EJM Group */
+
+.company-group {
+    width: 100%;
+}
+
+.image_company-group {
+    display: flex;
+}
+
+.glass-group {
+    margin-left: 60px;
+    margin-top: -20px;
+}
+
+
+/* EJM Innovations */
+
+.company-Innovations {
+    width: 100%;
+}
+
+.image_company-Innovations {
+    display: flex;
+
+}
+
+.glass-Innovations {
+    margin-left: 85px;
+    margin-top: 65px;
+}
+
+
+
+/* EJM Logistics */
+
+.company-Logistics {
+    width: 100%;
+}
+/* текст */
+.text-Logistics, .text-Group, .text-Innovations, .text-LLC {
+    min-height: 235px;
+    max-width: 315px;
+    margin-top: 60px;
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #474747;
+}
+
+.glass-Logistics {
+    margin-top: 30px;
+    margin-left: 25px;
+}
+
+/* EJM LLC */
+
+.company-LLC {
+    width: 100%;
+}
+
+.group-LLC, .group-Logistics, .group-Innovations, .group-group {
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, .2);
+    background-color: transparent;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.group-LLC, .image_group, .image_Logistics, .group-Logistics {
+    display: flex;
+    margin-left: auto;
+    margin-right: 0%;
+    justify-content: flex-end;
+}
+
+.glass-LLC, .glass-group, .glass-Innovations, .glass-Logistics {
+    position: absolute;
+}
+
+.glass-LLC {
+    margin-top: -20px;
+    margin-left: 40px;
+}
+
+
+
+
+
+/* НАШИ ПРОЕКТЫ */
+
+.projects-backround {
+    background-color: rgba(231, 242, 255, 0.3);
+}
+
+.our-projects {
+    padding: 1px;
+    max-width: 1390px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    color: #2D9CDB;
+}
+
+.our-projects_first, .our-projects_second {
+    display: flex;
+}
+
+.project-templhof {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.project-templhof img {
+    border-radius: 10px;
+}
+
+.project-title {
+    margin-left: 10px;
+
+}
+
+.more-detail {
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: 20px;
+    margin-top: 10px;
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    text-decoration-line: underline;
+    color: #6CA6CD;
+    transition: color .3s ease;
+}
+
+.project-templhof a {
+    text-decoration: none;
+}
+
+.more-detail:hover {
+    color: #275675;
+}
+
+.more-projects {
+    display: flex;
+    margin-right: 40px;
+    margin-bottom: 55px;
+    flex-direction: row-reverse;
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration-line: underline;
+    color: #333333;
+    transition: color .3s ease;
+}
+
+.more-projects:hover {
+    color: orange;
+}
+
+
+
+/* НОВОСТИ */
+
+.news {
+    background-color: rgba(231, 242, 255, 0.91);
+    width: 100%;
+    height: 100%;
+}
+
+.news-materials {
+    max-width: 1390px;
+    margin: 0 auto;
+    padding-top: 1px;
+}
+
+.news-materials_conteiner {
+    display: flex;
+}
+
+.news-materials h1 {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.news-materials_img {
+    width: 50%;
+}
+
+.news-materials_img img {
+    margin-top: 90px;
+    margin-left: 33%;
+    border-radius: 10px;
+}
+
+.news-materials_text {
+    padding-top: 1px;
+}
+
+.materials-link {
+    margin-top: 90px;
+    max-width: 415px;
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    color: #515151;
+}
+
+.description {
+    max-width: 450px;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #515151;
+}
+
+.button-all_project {
+    cursor: pointer;
+    margin-top: 35px;
+    width: 200px;
+    height: 40px;
+    background-color: rgba(255, 161, 50, 1);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 160px;
+    transition: background-color .3s ease;
+}
+
+.button-all_project:hover {
+    background-color: rgb(202, 115, 15);
+}
+
+
+
+/* ПОДВАЛ */
+
+.footer {
+    background-color: rgba(119, 136, 153, 1);
+    width: 100%;
+    padding-bottom: 1px;
+}
+
+.footer-EJM {
+    max-width: 1390px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 355px;
+}
+
+
+.footer-EJM img {
+    margin-top: 10px;
+    width: 140px;
+    height: 70px;
+    background-color: white;
+}
+
+.our-directions li {
+    margin-bottom: 20px;
+    margin-left: 98px;
+    list-style: none;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+    transition: opacity .4 ease;
+}
+
+.our-directions li:hover {
+    color: white;
+    opacity: .5;
+}
+
+.footer-title {
+    margin-bottom: 0%;
+}
+
+.line-footer_mail, .line-footer_location, .line-footer_EJM {
+    margin: 0;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: none;
+    height: 1px;
+    background-color: white;
+}
+
+.title-EJM {
+    margin-left: 98px;
+}
+
+.title-location, .title-EJM, .title-mail  {
+    text-decoration: none;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.line-footer_EJM {
+    width: 185px;
+    margin-left: 98px;
+}
+
+.our-mission {
+    margin-left: 165px;
+    padding: 0%;
+    width: 310px;
+}
+
+.our-mission li {
+    margin-bottom: 40px;
+    list-style: none;
+}
+
+.our-directions_link {
+    text-decoration: none;
+    width: 245px;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.our-mission_link {
+    text-decoration: none;
+    width: 245px;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+    transition: opacity .4 ease;
+}
+
+.our-mission_link:hover {
+    color: white;
+    opacity: .5;
+}
+
+.email-addresses {
+    margin-left: 160px;
+}
+
+.email-addresses_link {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+    transition: opacity .4 ease;
+}
+
+.email-addresses_link:hover {
+    color: white;
+    opacity: .5;
+}
+
+.email-addresses li {
+    list-style: none;
+}
+
+.email-addresses_link {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.footer-text {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 35px;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+}

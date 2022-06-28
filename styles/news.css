@@ -108,6 +108,7 @@
 /* Смена языка */
 
 .header-right {
+    z-index: 1;
     display: inline-block;
     width: 100px;
     margin-left: auto;
@@ -123,8 +124,13 @@
 }
 
 .language-choice {
+    background-color: none;
     display: block;
-    margin-left: 15px;
+    margin-left: 5px;
+    height: 25px;
+    padding: 5px;
+    padding-left: 10px;
+    transition: background-color .5s;
 }
 
 .triangle-language {
@@ -135,6 +141,14 @@
 .header-right:hover .header-language {
     width: 100px;
     height: 100px;
+}
+
+.language-choice:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100px;
+    height: 25px;
+    padding: 5px;
 }
 
 /* ссылка на возврат к главной странице */

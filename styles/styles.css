@@ -118,8 +118,13 @@
 }
 
 .language-choice {
+    background-color: none;
     display: block;
-    margin-left: 15px;
+    margin-left: 5px;
+    height: 25px;
+    padding: 5px;
+    padding-left: 10px;
+    transition: background-color .5s;
 }
 
 .triangle-language {
@@ -130,6 +135,14 @@
 .header-right:hover .header-language {
     width: 100px;
     height: 100px;
+}
+
+.language-choice:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100px;
+    height: 25px;
+    padding: 5px;
 }
 
 
@@ -192,7 +205,7 @@
 
 .content-button:hover .side-bar_link {
     opacity: 1;
-    left: 50px;
+    left: 30px;
 }
 
 .side-bar_nav:hover {

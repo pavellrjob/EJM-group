@@ -18,13 +18,13 @@
     <!-- Главный эеран с навигацией -->
     <div class="main-screen">
         <!-- шапка с навигацией -->
-        <div class="header">
-            <a class="logo" href="#"><img class="header-logo" src="img/Logo.svg" alt=""></a>
+        <div class="header" id="header-main">
+            <a class="logo" href="#header-main"><img class="header-logo" src="img/Logo.svg" alt=""></a>
             <nav class="header-nav">
                 <ul class="header-center">
-                    <li class="header-logistics"><a class="link-logistics" href="#">ELM Logistics</a></li>
-                    <li class="header-llc"><a class="link-llc" href="#">EJM LLC</a></li>
-                    <li class="header-innovations"><a class="link-innovations" href="#">EJM Innovations</a></li>
+                    <li class="header-logistics"><a class="link-logistics" href="#header-Group">ELM Logistics</a></li>
+                    <li class="header-llc"><a class="link-llc" href="#header-Group">EJM LLC</a></li>
+                    <li class="header-innovations"><a class="link-innovations" href="#header-Group">EJM Innovations</a></li>
                 </ul>
                 <div class="header-right">
                     <a class="language-btn" href="#"><img class="triangle-language" src="img/triangle.svg" alt="">UAH</a>
@@ -39,13 +39,13 @@
         <div class="side-bar">
             <button class="content-button" type="button">
                 <ul class="side-bar_link">
-                    <li class="side-bar_nav">Головна</li>
-                    <li class="side-bar_nav">EJM Group</li>
-                    <li class="side-bar_nav">EJM LLC</li>
-                    <li class="side-bar_nav">EJM Innovation</li>
-                    <li class="side-bar_nav">EJM Logistics</li>
-                    <li class="side-bar_nav">Нащі проекти</li>
-                    <li class="side-bar_nav">Новини</li>
+                    <li class="side-bar_nav"><a href="#header-main">Головна</a></li>
+                    <li class="side-bar_nav"><a href="#header-Group">EJM Group</a></li>
+                    <li class="side-bar_nav"><a href="#header-Group">EJM LLC</a></li>
+                    <li class="side-bar_nav"><a href="#header-Group">EJM Innovation</a></li>
+                    <li class="side-bar_nav"><a href="#header-Group">EJM Logistics</a></li>
+                    <li class="side-bar_nav"><a href="#header-Projects">Нащі проекти</a></li>
+                    <li class="side-bar_nav"><a href="#header-News">Новини</a></li>
                 </ul>
             </button>
             <ul class="social">
@@ -70,14 +70,14 @@
         <div class="main"></div>
     </div>
     <!-- Второй экран со всеми компаниями -->
-    <div class="our-company">
+    <div class="our-company" id="header-Group">
         <div class="EJM company-group">
             <img class="image_company-group our-company_img" src="img/Logo.svg" alt="">
             <img class="glass-group" src="img/glass.png" alt="">
             <img class="group-group" src="img/EJM Group.png" alt="">
             <p class="text-Group">Молода команда, яка швидко завоювала довіру клієнтів і швидко стала. Міжнародною компанією. Ми одночасно успішно розвиваємо 5 напрямків EJM Innovation (Будівництво та оренда), EJM Logistic (Інтернет продажі), EGM LLC (Будівництво, оренда та продаж на території України). Ми маємо
             продукт і послугу для кожного клієнта...</p>
-            <button class="button-all button-group" type="button">Читати все</button>
+            <button class="button-all button-group" onClick="location.href='html/EJMGroup.html'" type="button">Читати все</button>
         </div>
 
         <div class="EJM company-Innovations">
@@ -109,7 +109,7 @@
         </div>
     </div>
     <!-- Наши проекты -->
-    <div class="projects-backround">
+    <div class="projects-backround" id="header-Projects">
         <div class="our-projects">
             <h1>Нащі проекти</h1>
             <div class="our-projects_first">
@@ -160,7 +160,7 @@
         </div>
     </div>
     <!-- Новости -->
-    <div class="news">
+    <div class="news" id="header-News">
         <div class="news-materials">
             <h1>Новини</h1>
             <div class="news-materials_conteiner">

@@ -1,0 +1,204 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'PT Serif', serif;
+}
+
+.body {
+    max-width: 1920px;
+}
+
+/* Общий контент первого экрана */ 
+
+.main-screen {
+    display: grid;
+    grid-template-columns: 1fr 1390px 1fr;
+    grid-template-rows: 115px 1fr;
+    max-width: 1920px;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Заголовок */
+
+.content {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+.title {
+    margin: auto 0;
+    width: 100%;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    color: #2D9CDB;
+}
+
+.text-content {
+    margin: auto 0;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #515151;
+}
+
+
+/* ссылка на возврат к главной странице */
+.link {
+    max-height: 40px;
+    padding-top: 5px;
+    position: relative;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    max-width: 1390px;
+}
+
+.link img {
+    margin-right: 5px;
+}
+
+.link a {
+    margin-right: 5px;
+    text-decoration: none;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #82badf;
+}
+
+/* Основатели */
+
+.all-screen {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+.leaders {
+    background-image: url(../img/LeadersBackground.png);
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 100px;
+}
+
+.leaders-man {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5px;
+}
+
+.text-how {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: #0080D6;
+}
+
+.leader-text {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    position: absolute;
+    top: 78%;
+    width: 100%;
+}
+
+.Michelle-name {
+    width: 100%;
+    padding-left: 8%;
+    cursor: pointer;
+}
+
+.nameM:hover {
+    font-size: 22px;
+}
+
+.nameE:hover {
+    font-size: 22px;
+}
+
+.Enrico-name {
+    width: 100%;
+    padding-left: 50%;
+    cursor: pointer;
+}
+
+.nameM, .nameE {
+    font-size: 20px;
+    margin: 0;
+    margin-top: 10px;
+    transition: font-size 0.2s ease-in;
+}
+
+.hoE, .hoM {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.nameM, .hoM, .nameE, .hoE {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    color: #ffffff;
+}
+
+.Enrico-name a, .Michelle-name a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Руководители отделов */
+
+.leaders-teams {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.leaders-department {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.stock, .accounting, .marketing, .support {
+    border: solid 2px #BCD2EE;
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.stock-title {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.stock-text {
+    text-align: right;
+}
+
+.arrow-conteiner {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+
+img.arrow {
+    margin: 0 auto;
+}

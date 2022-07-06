@@ -13,8 +13,9 @@
     grid-template-columns: 1fr 1390px 1fr;
     grid-template-rows: 120px 1fr;
     background-color:rgba(188, 210, 238, .1);
-    width: 100%;
+    max-width: 1920px;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 /* Шапка + лого + смена языка */
@@ -26,10 +27,13 @@
 }
 
 .header {
+    background-color: rgba(248, 251, 253);
+    padding-left: 5%;
+    position: fixed;
     display: flex;
     width: 100%;
-    grid-row: 1/2;
-    grid-column: 2/3;
+    /* grid-row: 1/2;
+    grid-column: 2/3; */
 }
 
 .header-nav {
@@ -51,6 +55,7 @@
 }
 
 .header-right {
+    padding-right: 5%;
     margin-top: 30px;
 }
 
@@ -186,6 +191,16 @@
 
 }
 
+.side-bar_link a {
+    text-decoration: none;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000000;
+}
+
 .side-bar_nav {
     min-width: 250px;
     background-color: none;
@@ -212,6 +227,11 @@
     background-color: rgba(0, 0, 0, .5) ;
     color: white;
     min-width: 250px;
+    opacity: 1;
+}
+
+.side-bar_nav:hover a {
+    color: white;
     opacity: 1;
 }
 

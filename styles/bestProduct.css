@@ -1,0 +1,78 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'PT Serif', serif;
+}
+
+.body {
+    max-width: 1920px;
+}
+
+/* Общий контент первого экрана */ 
+
+.main-screen {
+    display: grid;
+    grid-template-columns: 1fr 1390px 1fr;
+    grid-template-rows: 115px 1fr;
+    background-image: url(../img/EJMGroupBackground.png);
+    max-width: 1920px;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Заголовок */
+
+.content {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+.title {
+    margin: auto 0;
+    width: 100%;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    color: #2D9CDB;
+}
+
+.text-content {
+    margin: auto 0;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #515151;
+}
+
+
+/* ссылка на возврат к главной странице */
+.link {
+    max-height: 40px;
+    padding-top: 5px;
+    position: relative;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    max-width: 1390px;
+}
+
+.link img {
+    margin-right: 5px;
+}
+
+.link a {
+    margin-right: 5px;
+    text-decoration: none;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #82badf;
+}

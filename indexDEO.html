@@ -18,7 +18,7 @@
     <!-- Главный эеран с навигацией -->
     <div class="main-screen">
         <!-- шапка с навигацией -->
-        <div class="header">
+        <div class="header" id="header-main">
             <a class="logo" href="#"><img class="header-logo" src="img/Logo.svg" alt=""></a>
             <nav class="header-nav">
                 <ul class="header-center">
@@ -39,13 +39,13 @@
         <div class="side-bar">
             <button class="content-button" type="button">
                 <ul class="side-bar_link">
-                    <li class="side-bar_nav">Startseite</li>
-                    <li class="side-bar_nav">EJM Group</li>
-                    <li class="side-bar_nav">EJM LLC</li>
-                    <li class="side-bar_nav">EJM Innovation</li>
-                    <li class="side-bar_nav">EJM Logistics</li>
-                    <li class="side-bar_nav">Unsere Projekte</li>
-                    <li class="side-bar_nav">Nachrichten</li>
+                    <li class="side-bar_nav"><a href="#header-main">Startseite</a></li>
+                    <li class="side-bar_nav"><a href="#header-Group">EJM Group</a></li>
+                    <li class="side-bar_nav"><a href="#header-Group">EJM LLC</a></li>
+                    <li class="side-bar_nav"><a href="#header-Group">EJM Innovation</a></li>
+                    <li class="side-bar_nav"><a href="#header-Group">EJM Logistics</a></li>
+                    <li class="side-bar_nav"><a href="#header-Projects">Unsere Projekte</a></li>
+                    <li class="side-bar_nav"><a href="#header-News">Nachrichten</a></li>
                 </ul>
             </button>
             <ul class="social">
@@ -70,7 +70,7 @@
         <div class="main"></div>
     </div>
     <!-- Второй экран со всеми компаниями -->
-    <div class="our-company">
+    <div class="our-company" id="header-Group">
         <div class="EJM company-group">
             <img class="image_company-group our-company_img" src="img/Logo.svg" alt="">
             <img class="glass-group" src="img/glass.png" alt="">
@@ -79,7 +79,7 @@
                 Ein junges, dynamisches Team, welches durch Professionalität und dem nötigen Know-How schnell das Vertrauen Ihrer Kunden gewann und zu einem internationalen Unternehmen wurde. Um Ihnen eine große Bandbreite 
                 an Dienstleistungen anbieten zu können, bauten wir erfolgreich wir vier Spatender EJM Group auf: EJM Innovations (Bau und Vermietung), EJM Trans (Transport)...
             </p>
-            <button class="button-all button-group" type="button">mehr</button>
+            <button class="button-all button-group" onClick="location.href='html/EJMGroupDEU.html'" type="button">mehr</button>
         </div>
 
         <div class="EJM company-Innovations">
@@ -90,7 +90,7 @@
                 Die EJM Innovations beschäftigt sich ausschließlich mit dem Immobilienmanagement auf dem deutschen Markt.
                 Von der Renovierung eines Hauses, einer Wohnung oder eines Büros über die Rekonstruktion und Sanierung eines Denkmalgeschützen Objektes: Wir führen alle Arten von Bau und Umbau durch...
             </p>
-            <button class="button-all button-Innovations" type="button">mehr</button>
+            <button class="button-all button-group" onClick="location.href='html/EJMGroupDEU.html'" type="button">mehr</button>
         </div>
 
         <div class="EJM company-Logistics">
@@ -100,7 +100,7 @@
             <p class="text-Logistics">
                 EJM Logistics hat eine Online-Verkaufsausrichtung. Das Unternehmen deckt den gesamten deutschen Markt ab und verfügt über eine sehr breite Produktpalette. Unser Unternehmen ermöglicht es Benutzern online, in ihrem Browser oder über eine mobile App, eine Bestellung zu erstellen, die Zahlungs- und Versandart der Bestellung auszuwählen und die Bestellung für fast alle beweglichen Sachen zu bezahlen...
             </p>
-            <button class="button-all button-Logistics" type="button">mehr</button>
+            <button class="button-all button-group" onClick="location.href='html/EJMGroupDEU.html'" type="button">mehr</button>
         </div>
 
         <div class="EJM company-LLC">
@@ -110,11 +110,11 @@
             <p class="text-LLC">
                 Ein junges Unternehmen, welches bereits einen großen Teil des deutschen Marktes erobert hat, ist nun auch international vertreten!Deutsche Qualität in der Ukraine, EJM LLC macht’s möglich.Sind Sie auf der Suche nach einem zuverlässigen und kompetenten Auftragnehmer? Möchten Sie Ihr Haus, Ihre Wohnung oder ein Büro bauen oder renovieren...
             </p>
-            <button class="button-all button-LLC" type="button">mehr</button>
+            <button class="button-all button-group" onClick="location.href='html/EJMGroupDEU.html'" type="button">mehr</button>
         </div>
     </div>
     <!-- Наши проекты -->
-    <div class="projects-backround">
+    <div class="projects-backround" id="header-Projects">
         <div class="our-projects">
             <h1>Unsere Projekte</h1>
             <div class="our-projects_first">
@@ -165,7 +165,7 @@
         </div>
     </div>
     <!-- Новости -->
-    <div class="news">
+    <div class="news" id="header-News">
         <div class="news-materials">
             <h1>Nachrichten</h1>
             <div class="news-materials_conteiner">

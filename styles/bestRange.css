@@ -13,7 +13,7 @@
     display: grid;
     grid-template-columns: 1fr 1390px 1fr;
     grid-template-rows: 115px 1fr;
-    background-image: url(../img/EJMGroupBackground.png);
+    background-color: rgba(244, 249, 255, 1);
     max-width: 1920px;
     height: 100vh;
     overflow-x: hidden;
@@ -22,17 +22,17 @@
 /* Заголовок */
 
 .content {
+    position: relative;
     max-width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    margin: 0 auto;
     grid-row: 1 / 2;
     grid-column: 2 / 3;
 }
 
 .title {
     margin: auto 0;
-    width: 100%;
+    width: 35%;
     font-family: 'Playfair Display';
     font-style: normal;
     font-weight: 700;
@@ -42,6 +42,7 @@
 }
 
 .text-content {
+    width: 65%;
     margin: auto 0;
     font-family: 'Segoe UI';
     font-style: normal;
@@ -76,3 +77,33 @@
     line-height: 19px;
     color: #82badf;
 }
+
+hr {
+    opacity: 0.2;
+}
+
+.content-body {
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 120px;
+    position: relative;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+.content-text {
+    padding-right: 50px;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #252525;
+}
+
+.content-text p {
+    margin-top: 0%;
+}
+

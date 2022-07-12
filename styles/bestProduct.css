@@ -12,8 +12,8 @@
 .main-screen {
     display: grid;
     grid-template-columns: 1fr 1390px 1fr;
-    grid-template-rows: 115px 1fr;
-    background-image: url(../img/EJMGroupBackground.png);
+    grid-template-rows: 125px 1fr;
+    background-color: rgba(244, 249, 255, 1);
     max-width: 1920px;
     height: 100vh;
     overflow-x: hidden;
@@ -22,6 +22,7 @@
 /* Заголовок */
 
 .content {
+    position: relative;
     max-width: 100%;
     display: flex;
     flex-wrap: nowrap;
@@ -32,7 +33,7 @@
 
 .title {
     margin: auto 0;
-    width: 100%;
+    width: 35%;
     font-family: 'Playfair Display';
     font-style: normal;
     font-weight: 700;
@@ -42,6 +43,7 @@
 }
 
 .text-content {
+    width: 65%;
     margin: auto 0;
     font-family: 'Segoe UI';
     font-style: normal;
@@ -75,4 +77,50 @@
     font-size: 14px;
     line-height: 19px;
     color: #82badf;
+}
+
+hr {
+    opacity: 0.2;
+}
+
+/* Тело */
+
+.content-body {
+    margin-top: 120px;
+    position: relative;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+.first-row, .second-row {
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.second-row {
+    margin-top: 80px;
+}
+
+.first-row-img, .second-row-img {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 60%;
+    justify-content: space-around;
+}
+
+.first-row-text, .second-row-text {
+    width: 40%;
+}
+
+.first-row-text p, .second-row-text p {
+    margin: 0%;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #252525;
+
 }

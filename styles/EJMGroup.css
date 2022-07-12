@@ -282,6 +282,15 @@
     color: #2D9CDB;
 }
 
+.fact-text {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #515151;
+}
+
 
 
 /* Почему мы лучшие */

@@ -1,0 +1,646 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'PT Serif', serif;
+}
+
+.body {
+    max-width: 1920px;
+    display: grid;
+    grid-template-columns: 1fr 1390px 1fr;
+    grid-template-rows: 80px 1fr 1fr;
+    
+}
+/* Общий контент первого экрана */ 
+
+.main-screen {
+    display: grid;
+    background-image: url(../img/EJMInnovationBackground.png);
+    grid-template-columns: 1fr 1390px 1fr;
+    grid-template-rows: 80px 1fr 1fr;
+    max-width: 1920px;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Шапка + лого + смена языка */
+
+.header-logo {
+    margin-top: 10px;
+    background-color: transparent;
+    
+}
+
+.header {
+    background-color: rgba(248, 251, 253);
+    padding-left: 5%;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid #bcc4d0;
+    z-index: 1;
+    /* grid-row: 1/2;
+    grid-column: 2/3; */
+}
+
+.header-nav {
+    display: flex;
+    width: 100%;
+
+}
+
+.header-center {
+    padding: 0%;
+    margin-left: 100px;
+    display: flex;
+    margin-top: 30px;
+}
+
+.header-center li {
+    margin-right: 60px;
+    list-style-type: none;
+}
+
+.header-right {
+    padding-right: 5%;
+    margin-top: 30px;
+}
+
+.header-right a {
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #778899;
+}
+
+.header-center a {
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #778899;
+    transition: color .5s ease;
+}
+
+.header-center a:hover {
+    color: #304257;
+}
+
+.header-center a::before {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: orange;
+    position: absolute;
+    top: 10px;
+    opacity: 0;
+    transition: opacity .8s ease;
+}
+
+.header-center a:hover::before {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: orange;
+    position: absolute;
+    top: 10px;
+    opacity: 1;
+}
+
+/* Смена языка */
+
+.header-right {
+    display: inline-block;
+    width: 100px;
+    margin-left: auto;
+    margin-right: 50px;
+    z-index: 1;
+}
+
+.header-language {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: height .3s;
+    z-index: 1;
+}
+
+.language-choice {
+    background-color: none;
+    display: block;
+    margin-left: 5px;
+    height: 25px;
+    padding: 5px;
+    padding-left: 10px;
+    transition: background-color .5s;
+}
+
+.triangle-language {
+    margin-right: 5px;
+    padding: 2px;
+}
+
+.header-right:hover .header-language {
+    width: 100px;
+    height: 100px;
+}
+
+.language-choice:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100px;
+    height: 25px;
+    padding: 5px;
+}
+
+
+/* ссылка на возврат к главной странице */
+.link {
+    max-height: 40px;
+    padding-top: 5px;
+    position: relative;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    max-width: 1390px;
+}
+
+.link img {
+    margin-right: 5px;
+}
+
+.link a {
+    margin-right: 5px;
+    text-decoration: none;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #82badf;
+}
+
+
+/* Инфа о компании  */
+
+.main-content {
+    box-sizing: border-box;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.background-circle {
+    position: absolute;
+    margin-top: 100px;
+    left: -5%;
+    z-index: -1;
+}
+
+.left-side {
+    width: 40%;
+}
+
+
+.content-img {
+    position: relative;
+    padding: 1px;
+    margin-left: 100px;
+}
+
+.content-inf {
+    margin: 0 auto;
+    width: 1390px;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 100px;
+}
+
+
+
+
+
+.one h3 {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000000;
+}
+
+
+
+
+
+.content-text {
+    width: 60%;
+    padding-right: 5%;
+    margin-left: 5%;
+    
+}
+
+.text-title {
+    margin-top: 0;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    color: #2D9CDB;
+}
+
+.text-about {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #515151;
+    margin-top: 50px;
+    max-height: 300px;
+    
+}
+
+.main-content hr {
+    margin-top: 40px;
+    border: none;
+    background-image: linear-gradient(left, #e6e5e5 0%, #bcbcbc 25%, #bcbcbc 75%, #e6e5e5 100%);
+    background-image: linear-gradient(to right, #e6e5e5 0%, #bcbcbc 25%, #bcbcbc 75%, #e6e5e5 100%);
+    height: 2px;
+    width: 100%;
+    padding: auto;
+    box-shadow: 0px 1px 0px #fff;
+    position: relative;
+}
+
+/* Кнопка */
+
+
+.button-all {
+    cursor: pointer;
+    margin-top: 100px;
+    width: 200px;
+    height: 40px;
+    border: none;
+    background-color: rgba(255, 161, 50, 1);
+    border-radius: 5px;
+    color: white;
+    transition: background-color .5s ease;
+}
+
+.button-all:hover {
+    background-color: rgb(202, 115, 15);
+}
+
+/* Чем занимаемся */
+
+.what-we_do {
+    width: 100%;
+    position: relative;
+}
+
+.bilding-title{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #212121;
+}
+
+.bilding-material {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.bilding-sand {
+    background-image: url(../img/material-sand.png);
+    width: 100%;
+    height: 157px;
+}
+
+.bilding-iron {
+    background-image: url(../img/metal-iron.png);
+    width: 100%;
+    height: 157px;
+}
+
+.bilding-gips {
+    background-image: url(../img/building-gips.png);
+    width: 100%;
+    height: 157px;
+}
+
+.bilding-wood {
+    background-image: url(../img/wood-material.png);
+    width: 100%;
+    height: 157px;
+}
+
+.bilding-bolt {
+    background-image: url(../img/bolts-nuts.png);
+    width: 100%;
+    height: 157px;
+}
+
+.bilding-text {
+    text-align: center;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+/* Список */
+
+.title-services {
+    margin-top: 50px;
+    margin-left: 13%;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.list-content {
+    position: relative;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.list-title {
+    width: 40%;
+}
+
+.list-text {
+    width: 60%;
+    padding-left: 50px;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1a1a1a;
+}
+
+.list-title li {
+    margin-bottom: 10px;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #515151;
+}
+
+
+/* Как мы работаем */
+
+.second-screen {
+    display: grid;
+    grid-row: 3 / 4;
+    grid-column: 1 / 4;
+    grid-template-columns: 1fr 1390px 1fr;
+    background-image: url(../img/bacgroundInnovation.png);
+}
+
+.how-we_do {
+    grid-column: 2 / 3;
+    width: 100%;
+}
+
+.title-we_do {
+    margin-top: 150px;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    color: #2D9CDB;
+}
+
+.title-text {
+    margin-top: 110px;
+    margin-left: 10%;
+    max-width: 500px;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000000;
+}
+
+/* первый этап */
+
+.project {
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.project-left {
+    padding-left: 10%;
+    padding-right: 5%;
+    min-height: 230px;
+    background-color: rgba(255, 255, 255, 0.49);
+}
+
+.project-left h3 {
+    margin-top: 40px;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.text-etap {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #515151;
+}
+
+.project-last {
+    margin-top: 0%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+}
+
+.project-right {
+    padding-left: 5%;
+    padding-right: 10%;
+    min-height: 230px;
+    background-color: rgba(255, 255, 255, 0.49);
+}
+
+.project-right h3 {
+    margin-top: 40px;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.project-only_title {
+    padding-left: 5%;
+    width: 100%;
+    min-height: 230px;
+    background-color: rgba(255, 255, 255, 0.49);
+}
+
+.project-only_title h3 {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.title-first {
+    margin-top: 40px;
+}
+
+.many-img {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+}
+
+.project-right-end {
+    width: 60%;
+    padding-left: 5%;
+    padding-right: 10%;
+    min-height: 230px;
+    background-color: rgba(255, 255, 255, 0.49);
+}
+
+.second-img {
+    margin-left: 40%;
+    margin-top: -40px;
+}
+
+.first-img {
+    margin-top: -40px;
+}
+
+.project-right-end h3 {
+    margin-top: 30px;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.text-title-etap {
+    margin-bottom: 0%;
+    margin-top: 20px;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.text-etap {
+    margin-top: 0%;
+}
+
+
+
+.project-finish {
+    margin-top: 0%;
+    padding-left: 10%;
+    padding-right: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+}
+
+.project-finish h3 {
+    margin-top: 30px;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.project-left-end {
+    padding-left: 10%;
+    padding-right: 14%;
+    min-height: 230px;
+    background-color: rgba(255, 255, 255, 0.49);
+}
+
+.title-finish {
+    margin-left: 10%;
+    margin-top: 50px;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.text-etap-end {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #515151;
+    max-width: 450px;
+}
+
+.text-etap-finish {
+    margin-top: 30px;
+    max-width: 600px;
+    margin-left: 10%;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #515151;
+    margin-bottom: 50px;
+}

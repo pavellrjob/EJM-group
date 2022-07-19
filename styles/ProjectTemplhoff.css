@@ -1,0 +1,342 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'PT Serif', serif;
+}
+
+.body {
+    max-width: 1920px;
+    display: grid;
+    grid-template-columns: 1fr 1390px 1fr;
+    grid-template-rows: 80px 1fr 1fr;
+    
+}
+/* Общий контент первого экрана */ 
+
+.main-screen {
+    display: grid;
+    background-color: rgba(244, 249, 255, 1);
+    /* background-image: url(../img/EJMInnovationBackground.png); */
+    grid-template-columns: 1fr 1390px 1fr;
+    grid-template-rows: 80px 1fr 1fr;
+    max-width: 1920px;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Шапка + лого + смена языка */
+
+.header-logo {
+    margin-top: 10px;
+    background-color: transparent;
+    
+}
+
+.header {
+    background-color: rgba(248, 251, 253);
+    padding-left: 5%;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid #bcc4d0;
+    z-index: 1;
+    /* grid-row: 1/2;
+    grid-column: 2/3; */
+}
+
+.header-nav {
+    display: flex;
+    width: 100%;
+
+}
+
+.header-center {
+    padding: 0%;
+    margin-left: 100px;
+    display: flex;
+    margin-top: 30px;
+}
+
+.header-center li {
+    margin-right: 60px;
+    list-style-type: none;
+}
+
+.header-right {
+    padding-right: 5%;
+    margin-top: 30px;
+}
+
+.header-right a {
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #778899;
+}
+
+.header-center a {
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #778899;
+    transition: color .5s ease;
+}
+
+.header-center a:hover {
+    color: #304257;
+}
+
+.header-center a::before {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: orange;
+    position: absolute;
+    top: 10px;
+    opacity: 0;
+    transition: opacity .8s ease;
+}
+
+.header-center a:hover::before {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: orange;
+    position: absolute;
+    top: 10px;
+    opacity: 1;
+}
+
+/* Смена языка */
+
+.header-right {
+    display: inline-block;
+    width: 100px;
+    margin-left: auto;
+    margin-right: 50px;
+    z-index: 1;
+}
+
+.header-language {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: height .3s;
+    z-index: 1;
+}
+
+.language-choice {
+    background-color: none;
+    display: block;
+    margin-left: 5px;
+    height: 25px;
+    padding: 5px;
+    padding-left: 10px;
+    transition: background-color .5s;
+}
+
+.triangle-language {
+    margin-right: 5px;
+    padding: 2px;
+}
+
+.header-right:hover .header-language {
+    width: 100px;
+    height: 100px;
+}
+
+.language-choice:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100px;
+    height: 25px;
+    padding: 5px;
+}
+
+
+/* ссылка на возврат к главной странице */
+.link {
+    max-height: 40px;
+    padding-top: 5px;
+    position: relative;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    max-width: 1390px;
+}
+
+.link img {
+    margin-right: 5px;
+}
+
+.link a {
+    margin-right: 5px;
+    text-decoration: none;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #82badf;
+}
+
+/* Контент */
+
+.conteiner {
+    display: grid;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+#header-link {
+    margin-right: 10%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 50px;
+    justify-content: right;
+    height: 50px;
+}
+
+
+
+.templ {
+    padding: 10px 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #778899;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+/* наведение на ссылки */
+
+.templ:hover {
+    color: #304257;
+}
+
+.templ::before {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: orange;
+    position: absolute;
+    top: 10px;
+    opacity: 0;
+    transition: opacity .8s ease;
+}
+
+.templ:hover::before {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: orange;
+    position: absolute;
+    top: 10px;
+    opacity: 1;
+}
+
+/* Контент продолж */
+
+
+#general-link {
+    top: -200px;
+    position: relative;
+}
+
+.general {
+    position: absolute;
+    display: none;
+    flex-wrap: nowrap;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 100px;
+    transition: display 0.4s ease-in;
+}
+
+
+
+/* .one, .two, .three, .four .five {
+
+} */
+
+
+
+.all-img {
+    margin-right: 100px;
+}
+
+.two-img {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-project p {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #515151;
+}
+
+.text-chenge {
+    padding-left: 20px;
+}
+
+/* Вторая страница */
+
+/* .two {
+    
+} */
+
+.two img {
+    margin-right: 20px;
+}
+
+.anothe {
+    margin-top: 0;
+}
+
+/* Третья страница */
+
+.three img {
+    margin-right: 20px;
+}
+
+
+/* Четвертая страница */
+
+.four img {
+    margin-right: 20px;
+}
+
+
+
+/* Пятая страница */
+
+.five img {
+    margin-right: 20px;
+}
+
+
+.active {
+    color: orange;
+}
+
+.active2 {
+    display: flex;
+    transition: display 0.4s ease-in;
+}
+

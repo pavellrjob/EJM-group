@@ -1,0 +1,334 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'PT Serif', serif;
+}
+
+.body {
+    max-width: 1920px;
+}
+/* Общий контент первого экрана */ 
+
+.main-screen {
+    display: grid;
+    grid-template-columns: 1fr 1390px 1fr;
+    grid-template-rows: 80px 1fr;
+    background-image: url(../img/EJMGroupBackground.png);
+    max-width: 1920px;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Шапка + лого + смена языка */
+
+.header-logo {
+    margin-top: 10px;
+    background-color: transparent;
+    
+}.header {
+    background-color: rgba(248, 251, 253);
+    padding-left: 5%;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid #bcc4d0;
+    z-index: 1;
+    /* grid-row: 1/2;
+    grid-column: 2/3; */
+}
+
+.header-nav {
+    display: flex;
+    width: 100%;
+
+}
+
+.header-center {
+    padding: 0%;
+    margin-left: 100px;
+    display: flex;
+    margin-top: 30px;
+}
+
+.header-center li {
+    margin-right: 60px;
+    list-style-type: none;
+}
+
+.header-right {
+    padding-right: 5%;
+    margin-top: 30px;
+}
+
+.header-right a {
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #778899;
+}
+
+.header-center a {
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #778899;
+    transition: color .5s ease;
+}
+
+.header-center a:hover {
+    color: #304257;
+}
+
+.header-center a::before {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: orange;
+    position: absolute;
+    top: 10px;
+    opacity: 0;
+    transition: opacity .8s ease;
+}
+
+.header-center a:hover::before {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: orange;
+    position: absolute;
+    top: 10px;
+    opacity: 1;
+}
+
+/* Смена языка */
+
+.header-right {
+    display: inline-block;
+    width: 100px;
+    margin-left: auto;
+    margin-right: 50px;
+    z-index: 1;
+}
+
+.header-language {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: height .3s;
+    z-index: 1;
+}
+
+.language-choice {
+    background-color: none;
+    display: block;
+    margin-left: 5px;
+    height: 25px;
+    padding: 5px;
+    padding-left: 10px;
+    transition: background-color .5s;
+}
+
+.triangle-language {
+    margin-right: 5px;
+    padding: 2px;
+}
+
+.header-right:hover .header-language {
+    width: 100px;
+    height: 100px;
+}
+
+.language-choice:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100px;
+    height: 25px;
+    padding: 5px;
+}
+
+
+/* ссылка на возврат к главной странице */
+.link {
+    max-height: 40px;
+    padding-top: 5px;
+    position: relative;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    max-width: 1390px;
+}
+
+.link img {
+    margin-right: 5px;
+}
+
+.link a {
+    margin-right: 5px;
+    text-decoration: none;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #82badf;
+}
+
+
+/* Инфа о компании  */
+
+.main-content {
+    box-sizing: border-box;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.background-circle {
+    position: absolute;
+    margin-top: 100px;
+    left: -5%;
+    z-index: -1;
+}
+
+.content-inf {
+    margin: 0 auto;
+    width: 1390px;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 100px;
+}
+
+.content-img {
+    position: relative;
+    padding: 1px;
+    margin-left: 100px;
+}
+
+.content-text {
+    padding-right: 5%;
+    margin-left: 5%;
+
+}
+
+.text-title {
+    margin-top: 0;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    color: #2D9CDB;
+}
+
+.text-about {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #515151;
+    margin-top: 50px;
+    max-height: 300px;
+    
+}
+
+.main-content hr {
+    margin-top: 50px;
+    border: none;
+    background-image: linear-gradient(left, #e6e5e5 0%, #bcbcbc 25%, #bcbcbc 75%, #e6e5e5 100%);
+    background-image: linear-gradient(to right, #e6e5e5 0%, #bcbcbc 25%, #bcbcbc 75%, #e6e5e5 100%);
+    height: 2px;
+    width: 100%;
+    padding: auto;
+    box-shadow: 0px 1px 0px #fff;
+    position: relative;
+}
+
+
+/* Наши разделы */
+
+.our-part-title {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.our-part-title h2 {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000000;
+}
+
+.our-part {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.our-part p {
+    margin-top: 10px;
+    padding-top: 10px;
+    margin-bottom: 38px;
+    margin-left: 10px;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.conteiner-elek {
+    width: 100%;
+    height: 100%;
+}
+
+.conteiner-elek a {
+    top: -40px;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.our-part-elektronic {
+    background-repeat: no-repeat;
+    background-image: url(../img/LogisticsElektronic.png);
+    width: 100%;
+    height: 100%;
+}
+
+.our-part-building {
+    background-repeat: no-repeat;
+    background-image: url(../img/LogisticsBilding.png);
+    width: 100%;
+    height: 100%;
+}
+
+.our-part-coat {
+    background-repeat: no-repeat;
+    background-image: url(../img/LogisticsCoat.png);
+    width: 100%;
+    height: 100%;
+}
+
+.our-part-car {
+    background-repeat: no-repeat;
+    background-image: url(../img/LogisticsCar.png);
+    width: 100%;
+    height: 100%;
+}
+
+
